@@ -72,13 +72,13 @@ module.exports = {
           if (!('sBye' in chat)) chat.sBye = ''
           if (!('sPromote' in chat)) chat.sPromote = ''
           if (!('sDemote' in chat)) chat.sDemote = ''
-          if (!('antiLink' in chat)) chat.antiLink = true
+          if (!('antiLink' in chat)) chat.antiLink = false
           if (!('autoread' in chat)) chat.autoread = false
           if (!('broadcast' in chat)) chat.broadcast = true
           if (!('clear' in chat)) chat.clear = false
           if (!isNumber(chat.clearTime)) chat.clearTime = (new Date() * 1) + 3600000 * 1
           if (!('delete' in chat)) chat.delete = true
-          if (!('desc' in chat)) chat.desc = true
+          if (!('desc' in chat)) chat.desc = false
           if (!('download' in chat)) chat.download = true
           if (!('getmsg' in chat)) chat.getmsg = false
           if (!isNumber(chat.groupTime)) chat.groupTime = 0
@@ -111,15 +111,15 @@ module.exports = {
         if (settings) {
           if (!'anon' in settings) settings.anon = true
           if (!'anticall' in settings) settings.anticall = true
-          if (!'antispam' in settings) settings.antispam = true
+          if (!'antispam' in settings) settings.antispam = false
           if (!'antitroli' in settings) settings.antitroli = true
           if (!'game' in settings) settings.game = true
           if (!'group' in settings) settings.group = false
-          if (!'jadibot' in settings) settings.jadibot = false
+          if (!'jadibot' in settings) settings.jadibot = true
           if (!'private' in settings) settings.private = false
           if (!'restrict' in settings) settings.restrict = false
           if (!'self' in settings) settings.self = false
-          if (!('tosw' in settings)) settings.tosw = '6283128734012@s.whatsapp.net'
+          if (!('tosw' in settings)) settings.tosw = '60199782326@s.whatsapp.net'
           if (!('playlist' in settings)) settings.playlist = ['37i9dQZEVXbObFQZ3JLcXt', '37i9dQZF1DXa2EiKmMLhFD']
         } else global.db.data.settings[this.user.jid] = {
           anon: true,
@@ -404,7 +404,7 @@ module.exports = {
                 profile: pp,
                 background: 'https://i.ibb.co/KhtRxwZ/dark.png'
               }, 'apikey')
-              await this.sendButtonLoc(jid, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', 'ariffb')
+              await this.sendButtonLoc(jid, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', 'adyy')
             }
           }
         }
@@ -472,7 +472,7 @@ global.dfail = (type, m, conn) => {
     private: 'perintah ini hanya bisa digunakan dichat pribadi',
     admin: 'perintah ini hanya untuk admin grup',
     botAdmin: 'jadikan bot sebagai admin untuk menggunakan perintah ini',
-    unreg: 'daftar untuk menggunakan perintah ini:\n\nformat:\n*.reg nama.umur*\n\ncontoh:\n*.reg amel cantik.19*',
+    unreg: 'daftar untuk menggunakan perintah ini:\n\nformat:\n*.reg nama.umur*\n\ncontoh:\n*.reg adii.19*',
     game: 'gamenya dimatiin sama ownernya guys',
   }[type]
   if (msg) return m.reply(msg)
