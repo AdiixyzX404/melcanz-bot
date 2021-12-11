@@ -171,8 +171,7 @@ let handler = async (m, { conn, usedPrefix: _p, text, isOwner, command }) => {
         }))
         let button = {
           buttonText: 'Pilih disini',
-          description: `yo @${m.sender.split`@`[0]}, klik untuk melihat daftar perintah`,
-          footerText: 'by Adii',
+          description: `Hello @${m.sender.split`@`[0]}, Klik untuk melihat daftar perintah`,
           title: 'menu'
         }
         return conn.sendListM(m.chat, button, array, m)
