@@ -13,9 +13,9 @@ global.APIKeys = {
 
 global.packname = 'AdyyBotz'
 global.author = '@Adiixyz'
-global.wm = 'Adyy'
-global.eror = '*Error*'
-global.wait = '*tunggu..*'
+global.wm = '© adyy'
+global.eror = 'aowkaowk emror'
+global.wait = '_Wait. Lemme process this stupid_'
 global.benar = '✅'
 global.salah = '❌'
 global.dikit = 'dikit lagi'
