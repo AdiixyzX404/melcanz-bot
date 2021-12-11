@@ -4,9 +4,9 @@ let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
 %readmore`.trimStart(),
-  header: '┌「 *%category* 」',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
+  header: '*⌜ %category ⌟:*\n*┏━──────────────*',
+  body: '*┃➥ %cmd* %islimit %isPremium',
+  footer: '*┗━──────────────* \n',
   after: `
 `,
 }
@@ -66,9 +66,9 @@ let handler = async (m, { conn, usedPrefix: _p, text, isOwner, command }) => {
       'audio': 'Pengubah Suara',
       'database': 'Database',
       'download': 'Downloader',
-      'fun': 'fun',
+      'fun': 'Fun',
       'game': `Games`,
-      'group': 'Grup',
+      'group': 'Group',
       'info': 'Info',
       'internet': 'Internet',
       'jadibot': 'Jadi Bot',
@@ -157,8 +157,8 @@ let handler = async (m, { conn, usedPrefix: _p, text, isOwner, command }) => {
       let arrayMenuFilter = arrayMenu.filter(v => !['list'].includes(v))
       if (isBusiness) {
         return m.reply(`
-  ┌「 Menu 」\n${arrayMenuFilter.map(v => '├ ' + _p + command + ' ' + v).join`\n`}
-  └────
+  *⌜ Menu ⌟:*\n*┏━──────────────*\n${arrayMenuFilter.map(v => '*┃➥ ' + _p + command + '*' + ' ' + v).join`\n`}
+  *┗━──────────────* 
   `.trim())
       }
       else {
@@ -168,8 +168,8 @@ let handler = async (m, { conn, usedPrefix: _p, text, isOwner, command }) => {
           rowId: `.m ${arrayMenuFilter[v]}`
         }))
         let button = {
-          buttonText: 'klik disini',
-          description: `hai @${m.sender.split`@`[0]}, klik untuk melihat daftar perintah`,
+          buttonText: 'Pilih disini',
+          description: `yo @${m.sender.split`@`[0]}, klik untuk melihat daftar perintah`,
           title: 'menu'
         }
         return conn.sendListM(m.chat, button, array, m)
