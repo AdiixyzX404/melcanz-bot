@@ -2,7 +2,7 @@ let fs = require('fs')
 let path = require('path')
 let moment = require('moment-timezone')
 const defaultMenu = {
-  before: `Uptime : ${uptime}
+  before: `Uptime : %uptime
 
 Cek xp,limit, role, level: .me
 `.trimStart(),
