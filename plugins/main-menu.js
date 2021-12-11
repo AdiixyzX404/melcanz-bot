@@ -2,8 +2,10 @@ let fs = require('fs')
 let path = require('path')
 let moment = require('moment-timezone')
 const defaultMenu = {
-  before: `
-%readmore`.trimStart(),
+  before: `Uptime : ${uptime}
+
+Cek xp,limit, role, level: .me
+`.trimStart(),
   header: '*⌜ %category ⌟:*\n*┏━──────────────*',
   body: '*┃➥ %cmd* %islimit %isPremium',
   footer: '*┗━──────────────* \n',
@@ -163,13 +165,14 @@ let handler = async (m, { conn, usedPrefix: _p, text, isOwner, command }) => {
       }
       else {
         let array = Object.keys(arrayMenuFilter).map(v => ({
-          title: arrayMenuFilter[v],
-          description: '',
+          title: arrayMenuFilter[v].toUpperCase(),
+          description: `menu ${arrayMenuFilter[v]}`,
           rowId: `.m ${arrayMenuFilter[v]}`
         }))
         let button = {
           buttonText: 'Pilih disini',
           description: `yo @${m.sender.split`@`[0]}, klik untuk melihat daftar perintah`,
+          footerText: 'by Adii',
           title: 'menu'
         }
         return conn.sendListM(m.chat, button, array, m)
