@@ -1,9 +1,8 @@
 let handler = async (m) => {
     m.reply(`
 ┌「 *donasi* 」
-├ https://saweria.co/ariffb
-├ https://saweria.co/ameys
-├ https://trakteer.id/ariffb/tip
+├ https://saweria.co/itsukichan
+├ pulsa : 60199782326
 └────
 `.trim())
 }
