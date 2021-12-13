@@ -2,13 +2,19 @@ let fs = require('fs')
 let path = require('path')
 let moment = require('moment-timezone')
 const defaultMenu = {
-  before: `Uptime : %uptime
-
-Cek xp,limit, role, level: .me
+  before: `*┏━───────────────────╮*
+*┃➥ Lib : *@adiwajshing/baileys*
+*┃➥ Bot Name : ${conn.user.name}*
+*┃➥ Creator : wa.me/60199782326*
+*┃➥ Runtime : %uptime*
+*┃➥ Date : %date*
+*┃➥ Time : %time*
+*┃➥ Day : %week %weton*
+*┗━───────────────────╯*
 `.trimStart(),
-  header: '*⌜ %category ⌟:*\n*┏━──────────────*',
+  header: '*⌜ %category Menu ⌟:*\n*┏━──────────────╮*',
   body: '*┃➥ %cmd* %islimit %isPremium',
-  footer: '*┗━──────────────* \n',
+  footer: '*┗━─────────────╯*\n',
   after: `
 `,
 }
