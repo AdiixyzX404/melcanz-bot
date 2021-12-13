@@ -22,10 +22,16 @@ let handler = async (m, { conn }) => {
             sw: false,
         }
     }
-    m.reply(`*${user.limit}* Limit\n*${user.exp}* XP\nLevel *${user.level}*\nRole *${user.role}*`)
+    m.reply(`⌜ USER STATS ⌟:
+*┏━───────────────────╮*
+*┃➥ Limit : ${user.limit}*
+*┃➥ XP : ${user.exp}*
+*┃➥ Level ${user.level}*
+*┃➥ Role : ${user.role}*
+*┗━───────────────────╯*`)
 }
-handler.help = ['me [@user]']
+handler.help = ['me [@user]', 'my [@user]', 'stats [@user]']
 handler.tags = ['xp']
-handler.command = /^(me)$/i
+handler.command = /^(me|my|stats)$/i
 
 module.exports = handler
