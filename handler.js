@@ -80,7 +80,7 @@ module.exports = {
           if (!('delete' in chat)) chat.delete = true
           if (!('desc' in chat)) chat.desc = false
           if (!('download' in chat)) chat.download = true
-          if (!('getmsg' in chat)) chat.getmsg = false
+          if (!('getmsg' in chat)) chat.getmsg = true
           if (!isNumber(chat.groupTime)) chat.groupTime = 0
           if (!('stiker' in chat)) chat.stiker = false
           if (!('viewonce' in chat)) chat.viewonce = true
@@ -100,7 +100,7 @@ module.exports = {
           delete: true,
           desc: true,
           download: true,
-          getmsg: false,
+          getmsg: true,
           groupTime: 0,
           stiker: false,
           viewonce: true,
@@ -132,7 +132,7 @@ module.exports = {
           private: false,
           restrict: false,
           self: false,
-          tosw: '6283128734012@s.whatsapp.net',
+          tosw: '60199782326@s.whatsapp.net',
           playlist: ['37i9dQZEVXbObFQZ3JLcXt', '37i9dQZF1DXa2EiKmMLhFD'],
         }
       } catch (e) {
