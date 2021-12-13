@@ -1,6 +1,7 @@
 let fs = require('fs')
 let path = require('path')
 let moment = require('moment-timezone')
+let picture = 'https://telegra.ph/file/a7c465757058a36e1b565.jpg'
 const defaultMenu = {
   before: `*┏━───────────────────╮*
 *┃➥ Lib : *@adiwajshing/baileys*
@@ -8,7 +9,7 @@ const defaultMenu = {
 *┃➥ Creator : wa.me/60199782326*
 *┃➥ Runtime : %uptime*
 *┃➥ Date : %date*
-*┃➥ Time : %time*
+*┃➥ Time : %time (Heroku Time)*
 *┃➥ Day : %week %weton*
 *┗━───────────────────╯*
 `.trimStart(),
@@ -236,7 +237,7 @@ let handler = async (m, { conn, usedPrefix: _p, text, isOwner, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButtonLoc(m.chat, fla + encodeURIComponent(teks), text.trim(), `${ucapan()}`, 'donasi', '.donasi')
+    await conn.sendButtonLoc(m.chat, `${picture}`, text.trim(), `created by adii`, 'donasi', '.donasi')
   } catch (e) {
     // conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
@@ -265,7 +266,7 @@ function ucapan() {
     res = "selamat pagi"
   }
   if (time > 10) {
-    res = "selamat sialng"
+    res = "selamat siang"
   }
   if (time >= 15) {
     res = "selamat sore"
