@@ -1,4 +1,4 @@
-let handler = async (m, { conn, args, participants }) => {
+/*let handler = async (m, { conn, args, participants }) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
     return { ...value, jid: key }
   })
@@ -50,3 +50,4 @@ function toNumber(property, _default = 0) {
 function enumGetKey(a) {
   return a.jid
 }
+*/
